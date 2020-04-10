@@ -29,7 +29,9 @@ export default class SearchResultsTemplate extends React.Component<ISearchResult
 
     public componentDidUpdate() {
         // Post render operations (previews on elements, etc.)
-        TemplateService.initPreviewElements();  
+        setTimeout(() => {
+            TemplateService.initPreviewElements();  
+        }, 1);
     }
 
     public UNSAFE_componentWillReceiveProps(nextProps: ISearchResultsTemplateProps) {
